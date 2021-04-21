@@ -1,23 +1,19 @@
 import pyttsx3 as p
 import os
-p.speak("Welcome to my tools")
-print("Enter 1 to Open Chrome")
-print("Enter 2 to Open notepad")
-print("Enter 3 to Open Windows Media Player")
-print("Enter 4 to Open ms paint")
-print("Enter 5 to Exit")
+p.speak("Welcome to our Services")
 while True:
-	print("Enter Your Choice = ")
-	inp = int(input())
-	if inp==1:
-		os.system("chrome")
-	elif inp==2:
-		os.system("notepad")
-	elif inp==3:
-		os.system("wmplayer")
-	elif inp==4:
-		os.system("mspaint")
-	elif inp==5:
-		break
-	else:
-		print("Doesnot Support")
+    print("Enter Your Requiremetns = ",end='')
+    inp = input()
+    if ("open" in inp) and ("chrome" in inp):
+        os.system("chrome")
+    elif(("open" in inp)or("run" in inp))and(("notepad" in inp)or("text editor" in inp)):
+        os.system("notepad")
+    elif ("open" in inp)and(("media player" in inp) or ("windows media player" in inp)):
+        os.system("wmplayer")
+    elif ("open" in inp) and (("paint" in inp) or ("mspaint" in inp)):
+        os.system("mspaint")
+    elif ("exit" in inp) or ("stop" in inp):
+        break
+    else:
+        print("Doesnot Support")
+print("Thanks For Using Our Services")
