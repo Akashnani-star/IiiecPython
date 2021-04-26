@@ -1,0 +1,6 @@
+a = open("Akash.txt","w")
+print(r"Writing 'First\nSecond\nThird\n' to the file Akash.txt")
+a.write("First\nSecond\nThird\n")
+print("written..")
+print("Watching the where pointer points to :",a.tell())
+a.close()
